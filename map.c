@@ -80,6 +80,9 @@ MapResult mapRemove(Map map, const char* key)
     {
         free(map->key[i]);
         free(map->value[i]);
+        //puts elements from end of map to where index was for removal
+        map->key[i] = map->key[map->size];
+        map->value[i] = map->value[map->size];
         map->size--; //reduce map size by one once element is removed
         return MAP_SUCCESS;
     }
