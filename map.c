@@ -3,7 +3,6 @@
 //
 #include <stdlib.h>
 #include "map.h"
-#include <assert.h>
 
 #define INITIAL_SIZE 2
 #define EXPAND_FACTOR 2
@@ -23,7 +22,7 @@ Map mapCreate(){
         return NULL;
     new_map->key = malloc(INITIAL_SIZE * sizeof(char*));
     new_map->value = malloc(INITIAL_SIZE * sizeof(char*));
-    if(new_map->key == NULL || new_map->value == NULL){
+    if(new_map->key == NULL || new_map->value == NULL){ //checking id any of the malloc failed
         free(new_map->key);
         free(new_map->value);
         free(new_map);
@@ -43,7 +42,7 @@ Map mapCopy(Map map){
         return NULL;
     newMap->size = map->size;
     newMap->maxSize = map->maxSize;
-    for (int i = 0; i < map->size; ++i) {
+    for (int i = 0; i < map->size; ++i) {//copying the original map data to the new map
         newMap->key[i] = malloc(strlen(map->key[i])+1);
         newMap->value[i] = malloc(strlen(map->value[i])+1);
         if(newMap->key[i] == NULL || newMap->value[i] == NULL){
@@ -131,7 +130,7 @@ char* mapGet(Map map, const char* key){
     if(map == NULL || key == NULL){
         return NULL;
     }
-    for (int i = 0; i < map->size; ++i) {
+    for (int i = 0; i < map->size; ++i) { //searching for the key in map
         if(strcmp(map->key[i],key) == 0){
             return map->value[i];
         }
@@ -143,7 +142,7 @@ bool mapContains(Map map, const char* key){
     if(map == NULL || key == NULL){
         return false;
     }
-    if(mapGet(map,key) == NULL){
+    if(mapGet(map,key) == NULL){ //using the mapGet function to check if the key exist in map
         return false;
     }
     return true;
@@ -153,7 +152,7 @@ MapResult mapPut(Map map, const char* key, const char* data){
     if(map == NULL || key == NULL || data == NULL){
         return MAP_NULL_ARGUMENT;
     }
-    if(mapContains(map,key)){
+    if(mapContains(map,key)){ //check if key exist then update value
         char* value = (mapGet(map,key));
         value = realloc(value,strlen(data)+1);
         if(value == NULL){
@@ -161,8 +160,8 @@ MapResult mapPut(Map map, const char* key, const char* data){
         }
         strcpy(value,data);
         return MAP_SUCCESS;
-    } else{
-        if(map->size == map->maxSize){
+    } else{ //if key isn't exist. than we create him and associate data as is value
+        if(map->size == map->maxSize){ //expanding map if it reach is max size
             if(expand(map) == MAP_OUT_OF_MEMORY){
                 return MAP_OUT_OF_MEMORY;
             }
@@ -183,7 +182,7 @@ MapResult mapPut(Map map, const char* key, const char* data){
     return MAP_ERROR;
 }
 
-
+//expand function trying to reallocate make space to keys and values array
 static MapResult expand(Map map) {
     int newSize = EXPAND_FACTOR * map->maxSize;
     char** newKey = realloc(map->key, newSize * sizeof(char*));
@@ -193,6 +192,7 @@ static MapResult expand(Map map) {
         free(newValue);
         return MAP_OUT_OF_MEMORY;
     }
+    //updating the pointers
     map->key = newKey;
     map->value = newValue;
     map->maxSize = newSize;
