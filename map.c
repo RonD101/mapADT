@@ -110,8 +110,7 @@ void mapDestroy(Map map)
 
 char* mapGetNext(Map map)
 {
-    assert(map != NULL);
-    if(map->iterator >= map->size)
+    if(map->iterator >= map->size || map == NULL)
     {
         return NULL;
     }
@@ -120,7 +119,9 @@ char* mapGetNext(Map map)
 
 char* mapGetFirst(Map map)
 {
-    assert(map != NULL);
+    if(map == NULL){
+        return NULL;
+    }
     map->iterator = 0;
     return mapGetNext(map);
 }
