@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/mapADT.dir/main.c.o"
+  "CMakeFiles/mapADT.dir/map.c.o"
   "mapADT"
   "mapADT.pdb"
 )

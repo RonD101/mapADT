@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/main.c" "/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug/CMakeFiles/mapADT.dir/main.c.o"
+  "/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/map.c" "/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug/CMakeFiles/mapADT.dir/map.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

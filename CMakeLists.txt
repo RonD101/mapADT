@@ -3,4 +3,4 @@ project(mapADT C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(mapADT main.c map.h)
+add_executable(mapADT main.c map.h map.c)
