@@ -1,7 +1,7 @@
-#include <stdio.h>
+//
+// Created by bardv on 3/19/2020.
+//
 
-int main() {
-    printf("Hello, World!\n");
-    printf("Bye, World!");
+int main(){
     return 0;
 }

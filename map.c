@@ -7,6 +7,7 @@
 
 #define INITIAL_SIZE 2
 #define EXPAND_FACTOR 2
+static MapResult expand(Map map);
 
 struct Map_t{
     char** key;
@@ -161,7 +162,9 @@ MapResult mapPut(Map map, const char* key, const char* data){
         return MAP_SUCCESS;
     } else{
         if(map->size == map->maxSize){
-            //expand
+            if(expand(map) == MAP_OUT_OF_MEMORY){
+                return MAP_OUT_OF_MEMORY;
+            }
         }
         map->key[map->size] = malloc(sizeof(strlen(key)+1));
         map->value[map->size] = malloc(sizeof(strlen(data)+1));
