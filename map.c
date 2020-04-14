@@ -3,9 +3,7 @@
 //
 #include <stdlib.h>
 #include "map.h"
-#include <stdlib.h>
 #include <assert.h>
-#include <string.h>
 
 #define INITIAL_SIZE 2
 #define EXPAND_FACTOR 2
@@ -63,7 +61,7 @@ int mapGetSize(Map map){
     return map->size;
 }
 
-enum MapResult_t mapRemove(Map map, const char* key)
+MapResult mapRemove(Map map, const char* key)
 {
     int cmpResult = 1, i = 0;
     if(map == NULL || key == NULL)
