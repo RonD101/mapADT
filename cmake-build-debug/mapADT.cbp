@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mapADT"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mapADT">
+				<Option output="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug/mapADT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 mapADT"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mapADT/fast">
+				<Option output="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug/mapADT" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 mapADT/fast"/>
+					<CompileFile command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j12 -f &quot;/Users/rond/Desktop/רון/טכניון/מבוא\ לתכנות\ מערכות/hw1/mapADT/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/main.c">
+			<Option target="mapADT"/>
+		</Unit>
+		<Unit filename="/Users/rond/Desktop/רון/טכניון/מבוא לתכנות מערכות/hw1/mapADT/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
