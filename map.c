@@ -65,42 +65,47 @@ int mapGetSize(Map map){
 MapResult mapRemove(Map map, const char* key)
 {
     int cmpResult = 1, i = 0;
+    //checks if the arguments passed were NULL
     if(map == NULL || key == NULL)
     {
         return MAP_NULL_ARGUMENT;
     }
+    //searches map to see if key element exists
     while(cmpResult != 0 && i < map->size)
     {
         cmpResult = strcmp(key, map->key[i]);
         i++;
     }
+    //if key element exists, free its data and the data associated with it
     if(cmpResult == 0)
     {
         free(map->key[i]);
         free(map->value[i]);
-        map->size--;
+        map->size--; //reduce map size by one once element is removed
         return MAP_SUCCESS;
     }
-    return MAP_ITEM_DOES_NOT_EXIST;
+    return MAP_ITEM_DOES_NOT_EXIST; //returns if key element was not found in map
 }
 
 MapResult mapClear(Map map)
 {
     if(map)
     {
+        //removes each element from map via function mapRemove until map.size is 0
         while (mapGetSize(map) > 0)
         {
             mapRemove(map, mapGetFirst(map));
         }
         return MAP_SUCCESS;
     }
-    return MAP_NULL_ARGUMENT;
+    return MAP_NULL_ARGUMENT; //returns if map is NULL
 }
 
 void mapDestroy(Map map)
 {
     if(map)
     {
+        // uses function mapClear then deallocates map elements and its data
         mapClear(map);
         free(map->key);
         free(map->value);
@@ -110,20 +115,23 @@ void mapDestroy(Map map)
 
 char* mapGetNext(Map map)
 {
+    //if reached end of map or if map argument is NULL return NULL
     if(map->iterator >= map->size || map == NULL)
     {
         return NULL;
     }
-    return map->key[map->iterator++];
+    return map->key[map->iterator++]; //return next key
 }
 
 char* mapGetFirst(Map map)
 {
+    //if map argument is NULL return NULL
     if(map == NULL){
         return NULL;
     }
+    //Sets the internal iterator to the first key element in the map
     map->iterator = 0;
-    return mapGetNext(map);
+    return mapGetNext(map); //returns first element in map
 }
 
 
