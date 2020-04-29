@@ -3,6 +3,7 @@
 //
 #include <stdlib.h>
 #include "map.h"
+#include <assert.h>
 
 #define INITIAL_SIZE 2
 #define EXPAND_FACTOR 2
@@ -78,11 +79,14 @@ MapResult mapRemove(Map map, const char* key)
     //if key element exists, free its data and the data associated with it
     if(cmpResult == 0)
     {
+        i--;
         free(map->key[i]);
         free(map->value[i]);
         //puts elements from end of map to where index was for removal
-        map->key[i] = map->key[map->size];
-        map->value[i] = map->value[map->size];
+        if(map->size != 1){
+            map->key[i] = map->key[map->size-1];
+            map->value[i] = map->value[map->size-1];
+        }
         map->size--; //reduce map size by one once element is removed
         return MAP_SUCCESS;
     }
@@ -177,8 +181,8 @@ MapResult mapPut(Map map, const char* key, const char* data){
                 return MAP_OUT_OF_MEMORY;
             }
         }
-        map->key[map->size] = malloc(sizeof(strlen(key)+1));
-        map->value[map->size] = malloc(sizeof(strlen(data)+1));
+        map->key[map->size] = malloc(sizeof(strlen(key))+1);
+        map->value[map->size] = malloc(sizeof(strlen(data))+1);
         if(map->value[map->size] == NULL || map->key[map->size] == NULL){
             free(map->value[map->size]);
             free(map->key[map->size]);
@@ -196,6 +200,7 @@ MapResult mapPut(Map map, const char* key, const char* data){
 //expand function trying to reallocate make space to keys and values array
 static MapResult expand(Map map) {
     int newSize = EXPAND_FACTOR * map->maxSize;
+    assert(map->key);
     char** newKey = realloc(map->key, newSize * sizeof(char*));
     char** newValue = realloc(map->value, newSize * sizeof(char*));
     if (newKey == NULL || newValue == NULL) {
